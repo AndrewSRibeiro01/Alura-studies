@@ -30,11 +30,13 @@ class Form extends React.Component {
                         max="01:30:00"
                         required />
                 </div>
-                <Botão />
+                <Botão
+                    texto="adicionar"
+                />
             </form>
         )
 
     }
 }
 
-export default Form 
+export default Form;
