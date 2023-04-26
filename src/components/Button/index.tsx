@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import style from './Botao.module.scss';
 
-class Botão extends React.Component<{ texto: "adicionar" }> {
-    render() {
-        return (
-            <button className={style.botao}>
-                {this.props.texto}
-            </button>
-        )
-    }
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    texto: string;
 }
 
-export default Botão;
+const Botao: React.FC<ButtonProps> = ({ texto, ...rest }) => {
+    return (
+        <button {...rest}> {texto} </button>
+    )
+}
+
+export default Botao;

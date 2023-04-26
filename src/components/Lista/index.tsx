@@ -15,10 +15,11 @@ function Lista() {
     }]
     return (
         <aside className={style.ListaTarefas}>
-            < h2 > Estudos do dia </h2 >
+            <h2> Estudos do dia </h2>
             <ul>
                 {tarefas.map((item, index) => (
                     <Item
+                    key={index}
                         {...item}
                     />
                 ))}
